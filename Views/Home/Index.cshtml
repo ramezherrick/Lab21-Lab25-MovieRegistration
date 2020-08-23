@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <body style="background-color:tomato">
+        <h2><center><bold>This lab is built on Money Heist Theme</bold></center></h2>
+        <h3><center>Most Popular/Viewed show on NetFlix</center></h3>
+        <br />
+        <p>If you are using google chrome: Go to setting>Privacy and Security>Site Settings>Content>Additional Content Settings>Sounds>Add site: https://localhost:44379/</p>
+
+        @*<img src="~/lib/image1.jpg" />*@
+        <img src="~/lib/giphy.gif"/>
+        <br>
+        <br />
+
+        <audio autoplay="autoplay">
+            <source src="~/lib/El Profesor - Bella Ciao (HUGEL Remix).mp3" type="audio/ogg">
+            <source src="~/lib/El Profesor - Bella Ciao (HUGEL Remix).mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+   
+
+        <a class="btn btn-primary" asp-controller="Movie" asp-action="WatchTrailer">Click here to watch on youtube</a>
+
+        <a class="btn btn-primary" asp-controller="Movie" asp-action="Index">Click here to register a movie</a>
+
+
+
+    </body>
+
+
+
+
+
+
+
+

@@ -1,0 +1,29 @@
+﻿
+
+@model Movie
+
+    <body style="background-color:tomato">
+        <form action="../Movie/PlayTrailer" method="post">
+
+
+            <label style="font-size:medium" for="text"><bold>Title:</bold></label>
+
+            <input type="text" name="Title" required />
+            <input class="btn btn-primary stretched-link" type="submit" value="watch on YouTube" />
+            <br />
+            <br />
+            <video width="640" height="480" autoplay>
+                <source src="~/lib/[SPOILER ALERT] Bella Ciao (Lyrics and English Translation)   La Casa de Papel   Money Heist.mp4" type="video/mp4">
+                <source src="~/lib/[SPOILER ALERT] Bella Ciao (Lyrics and English Translation)   La Casa de Papel   Money Heist.mp4" type="video/ogg">
+                Your browser does not support the video tag.
+            </video>
+
+        </form>
+
+    </body>
+
+
+
+
+
+

@@ -1,0 +1,20 @@
+﻿@model Movie
+<body style="background-color:tomato">
+@{
+    string urlLastPiece = "";
+    if (Model.Title.Contains(" "))
+    {
+        string[] videoName = Model.Title.Split(" ");
+        for (int i = 0; i < videoName.Length; i++)
+        {
+            urlLastPiece += videoName[i];
+        }
+    }
+    else urlLastPiece = Model.Title;
+
+    string url = "https://www.youtube.com/results?search_query=" + urlLastPiece;
+    <a style="font-size:300%" class="btn-light" href=@url><bold><center>Your Generated Link!</center></bold></a>
+}
+</body>
+
+

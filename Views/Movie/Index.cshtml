@@ -1,0 +1,100 @@
+﻿@{
+    ViewData["Title"] = "Movie Registration";
+}
+
+@model Movie
+
+
+<form action="../Movie/MovieResult" method="post" onsubmit="myFunction()">
+
+
+    <div class="container">
+        <div class=row>
+            <div class="col-md-2">
+                <label for="number">ID:</label>
+            </div>
+            <div class="col-md-4">
+
+                @Html.ValidationMessageFor(m => m.ID)
+                <input type="number" max="@int.MaxValue" name="ID" value="@Model.ID" required />
+            </div>
+
+        </div>
+
+        <div class=row>
+            <div class="col-md-2">
+                <label for="text">Title:</label>
+            </div>
+            <div class="col-md-4">
+
+                @Html.ValidationMessageFor(m => m.Title)
+                <input type="text" maxlength="50" name="Title" value="@Model.Title" required />
+            </div>
+        </div>
+
+
+        <div class=row>
+            <div class="col-md-2">
+                <label for="genres">Choose a genre:</label>
+            </div>
+            <div class="col-md-4">
+                <select name="Genre">
+                    <option value="scifi">Scifi</option>
+                    <option value="action">Action</option>
+                    <option value="drama">Drama</option>
+                    <option value="animated">Animated</option>
+                </select>
+            </div>
+        </div>
+
+
+        <div class=row>
+            <div class="col-md-2">
+                <label for="number">Year</label>
+            </div>
+            <div class="col-md-4">
+
+                @Html.ValidationMessageFor(m => m.Year)
+                <input type="number" min="1880" max="2020" name="Year" value="@Model.Year" required /><br />
+            </div>
+        </div>
+
+
+        <div class=row>
+            <div class="col-md-2">
+                <label for="text">Actors:</label>
+            </div>
+            <div class="col-md-4">
+
+                @Html.ValidationMessageFor(m => m.Actors)
+                <input type="text" maxlength="50" name="Actors" value="@Model.Actors" /><br />
+            </div>
+        </div>
+
+
+
+        <div class=row>
+            <div class="col-md-2">
+                <label for="text">Directors:</label>
+            </div>
+            <div class="col-md-4">
+
+                @Html.ValidationMessageFor(m => m.Directors)
+                <input type="text" maxlength="50" name="Directors" value="@Model.Directors" /><br />
+            </div>
+        </div>
+
+
+
+        <input class="btn btn-primary stretched-link" type="submit" value="Register Movie" />
+    </div>
+</form>
+
+
+<script>
+
+function myFunction() {
+    alert("Are you sure you want to register this movie?");
+}
+</script>
+
