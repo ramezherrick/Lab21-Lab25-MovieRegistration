@@ -16,7 +16,7 @@
             <div class="col-md-4">
 
                 @Html.ValidationMessageFor(m => m.ID)
-                <input type="number" max="@int.MaxValue" name="ID" value="@Model.ID" required />
+                <input id="Demo" type="number" max="@int.MaxValue" name="ID" value="@Model.ID" required />
             </div>
 
         </div>
@@ -28,7 +28,7 @@
             <div class="col-md-4">
 
                 @Html.ValidationMessageFor(m => m.Title)
-                <input type="text" maxlength="50" name="Title" value="@Model.Title" required />
+                <input id="Demo2" type="text" maxlength="50" name="Title" value="@Model.Title" required />
             </div>
         </div>
 
@@ -38,11 +38,11 @@
                 <label for="genres">Choose a genre:</label>
             </div>
             <div class="col-md-4">
-                <select name="Genre">
-                    <option value="scifi">Scifi</option>
-                    <option value="action">Action</option>
-                    <option value="drama">Drama</option>
-                    <option value="animated">Animated</option>
+                <select id="Demo3" name="Genre">
+                    <option value="Scifi">Scifi</option>
+                    <option value="Action">Action</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Animated">Animated</option>
                 </select>
             </div>
         </div>
@@ -55,7 +55,7 @@
             <div class="col-md-4">
 
                 @Html.ValidationMessageFor(m => m.Year)
-                <input type="number" min="1880" max="2020" name="Year" value="@Model.Year" required /><br />
+                <input id="Demo4" type="number" min="1880" max="2020" name="Year" value="@Model.Year" required /><br />
             </div>
         </div>
 
@@ -67,7 +67,7 @@
             <div class="col-md-4">
 
                 @Html.ValidationMessageFor(m => m.Actors)
-                <input type="text" maxlength="50" name="Actors" value="@Model.Actors" /><br />
+                <input id="Demo5" type="text" maxlength="50" name="Actors" value="@Model.Actors" /><br />
             </div>
         </div>
 
@@ -80,7 +80,7 @@
             <div class="col-md-4">
 
                 @Html.ValidationMessageFor(m => m.Directors)
-                <input type="text" maxlength="50" name="Directors" value="@Model.Directors" /><br />
+                <input id ="Demo6"type="text" maxlength="50" name="Directors" value="@Model.Directors" /><br />
             </div>
         </div>
 
@@ -93,8 +93,19 @@
 
 <script>
 
-function myFunction() {
-    alert("Are you sure you want to register this movie?");
+    function myFunction() {
+
+
+        var txtOne = document.getElementById("Demo").value;
+        var txttwo = document.getElementById("Demo2").value;
+        var txtthree = document.getElementById("Demo3").value;
+        var txtfour = document.getElementById("Demo4").value;
+        var txtfive = document.getElementById("Demo5").value;
+        var txtsix = document.getElementById("Demo6").value;
+
+        window.alert("Are you sure you want to register this movie?\n"+"ID: "+txtOne+"\n"+"Title: "+txttwo+"\n"+"Genre: "+txtthree+"\n"+"Year: "+txtfour+"\n"+"Actor: "+txtfive+"\n"+"Director: "+txtsix);
+
+     
 }
 </script>
 
